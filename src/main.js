@@ -59,6 +59,7 @@ function setBtnStatus() {
 }
 
 function changeDeliveryFee(e) {
+  e.preventDefault()
   if (e.target.matches(".standard")) {
     deliveryPrice.innerHTML = "免費";
     deliveryCost = 0;
@@ -70,6 +71,7 @@ function changeDeliveryFee(e) {
 
 // Active add/minus amount and price
 function handleProductAmount(e) {
+  e.preventDefault()
   let amount = Number(e.target.parentElement.children[1].innerHTML);
   let price = Number(e.target.parentElement.nextElementSibling.innerHTML);
   // console.log(price);

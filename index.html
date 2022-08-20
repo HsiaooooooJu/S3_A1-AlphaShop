@@ -51,10 +51,10 @@
         </label>
 
         <a href="#" class="navbar__brand align-center">
-          <img src="./dist/image/Logo.svg" style="width: 135px" class="navbar__brand__logo" alt="">
+          <img src="./dist/image/Logo.svg" class="navbar__brand__logo" alt="">
         </a>
       </nav>
-    </header>
+    <!-- </header> -->
 
     <main id="main-content">
       <!-- stepper -->
@@ -63,13 +63,13 @@
         <div class="stepper__container container">
           <div class="stepper__step active">
             <div class="stepper__step__circle-container"></div>
-            <span class="stepper__step__connect-line"></span>
             <label class="stepper__step__label" for="">寄送地址</label>
+            <span class="stepper__step__connect-line line-one"></span>
           </div>
           <div class="stepper__step">
             <div class="stepper__step__circle-container"></div>
-            <span class="stepper__step__connect-line"></span>
             <label class="stepper__step__label" for="">運送方式</label>
+            <span class="stepper__step__connect-line line-two"></span>
           </div>
           <div class="stepper__step">
             <div class="stepper__step__circle-container"></div>
@@ -180,6 +180,7 @@
 
       <section id="cart" class="cart-panel">
         <div class="cart__product container">
+          <h3 class="cart__product__title">購物籃</h3>
           <div class="cart__product__row">
             <div class="product-img product-one"></div>
             <div class="product-details">
@@ -225,39 +226,39 @@
     <footer>
       <div class="footer__container container">
         <img src="./dist/image/Logo.svg" style="width: 135px" class="navbar__brand__logo" alt="">
-        <div class="footer__service">
-          <h5 class="service__title">客戶服務</h5>
-          <ul class="service__list">
-            <li class="service__item">運送說明</li>
-            <li class="service__item">退換貨相關</li>
-            <li class="service__item">付款資訊</li>
-            <li class="service__item">FAQ</li>
+        <div class="footer__container__list">
+          <h5 class="footer__container__list__title">客戶服務</h5>
+          <ul class="footer__container__list__wrapper">
+            <li class="footer__container__list__item">運送說明</li>
+            <li class="footer__container__list__item">退換貨相關</li>
+            <li class="footer__container__list__item">付款資訊</li>
+            <li class="footer__container__list__item">FAQ</li>
           </ul>
         </div>
-        <div class="footer__about">
-          <h5 class="about__title">關於我們</h5>
-          <ul class="about__list">
-            <li class="service__item">品牌故事</li>
-            <li class="service__item">媒體聯繫</li>
-            <li class="service__item">Press Kit</li>
+        <div class="footer__container__list">
+          <h5 class="footer__container__list__title">關於我們</h5>
+          <ul class="footer__container__list__wrapper">
+            <li class="footer__container__list__item">品牌故事</li>
+            <li class="footer__container__list__item">媒體聯繫</li>
+            <li class="footer__container__list__item">Press Kit</li>
           </ul>
         </div>
-        <div class="footer__info">
-          <h5 class="info__title">資訊</h5>
-          <ul class="info__list">
-            <li class="info__item">隱私權政策</li>
-            <li class="info__item">Cookie</li>
-            <li class="info__item">GDPR</li>
+        <div class="footer__container__list">
+          <h5 class="footer__container__list__title">資訊</h5>
+          <ul class="footer__container__list__wrapper">
+            <li class="footer__container__list__item">隱私權政策</li>
+            <li class="footer__container__list__item">Cookie</li>
+            <li class="footer__container__list__item">GDPR</li>
           </ul>
         </div>
-        <div class="footer__follouw-us">
-          <h5 class="follow-us__title">追蹤 ALPHA SHOP</h5>
-          <ul class="follow-us__list">
-            <li class="follow-us__item">+886 2123-0000</li>
-            <li class="follow-us__item">
-              <img src="./dist/image/facebook.svg" style="width: 20px" alt="">
-              <img src="./dist/image/instagram.svg" style="width: 20px" alt="">
-              <img src="./dist/image/whatsapp.svg" style="width: 20px" alt="">
+        <div class="footer__container__list">
+          <h5 class="footer__container__list__title">追蹤 ALPHA SHOP</h5>
+          <ul class="footer__container__list__wrapper">
+            <li class="footer__container__list__item">+886 2123-0000</li>
+            <li class="footer__container__list__item icon-list">
+              <img class="list__item__icon mr-3" src="./dist/image/facebook.svg" style="width: 20px" alt="">
+              <img class="list__item__icon mr-4" src="./dist/image/instagram.svg" style="width: 20px" alt="">
+              <img class="list__item__icon" src="./dist/image/whatsapp.svg" style="width: 20px" alt="">
             </li>
           </ul>
         </div>
