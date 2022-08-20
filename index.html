@@ -61,12 +61,12 @@
       <section id="step-control" class="stepper">
         <h3 class="stepper__title mb-5">結帳</h3>
         <div class="stepper__container container">
-          <div class="stepper__step active checked">
+          <div class="stepper__step active">
             <div class="stepper__step__circle-container"></div>
             <span class="stepper__step__connect-line"></span>
             <label class="stepper__step__label" for="">寄送地址</label>
           </div>
-          <div class="stepper__step active">
+          <div class="stepper__step">
             <div class="stepper__step__circle-container"></div>
             <span class="stepper__step__connect-line"></span>
             <label class="stepper__step__label" for="">運送方式</label>
@@ -129,21 +129,21 @@
                 </div>
               </div>
 
-              <div class="form-content__part">
+              <div class="form-content__part d-none">
                 <h3 class="form-content__part__title mb-5">運送方式</h3>
                 <div class="form-content__part__shipping">
-                  <div class="shipping__form-row form-row active">
-                    <input type="radio">
-                    <label>
+                  <div class="shipping__form-row form-row cursor-pointer active">
+                    <input name="shipping-method" id="standard" type="radio" class="standard" checked>
+                    <label class="cursor-pointer" for="standard">
                       <p class="shipping-method">標準運送</p>
                       <p class="shipping-time">約 3-7 個工作天</p>
                     </label>
                     <span>免費</span>
 
                   </div>
-                  <div class="shipping__form-row form-row">
-                    <input type="radio">
-                    <label for="">
+                  <div class="shipping__form-row form-row cursor-pointer">
+                    <input name="shipping-method" id="express" type="radio" class="express">
+                    <label class="cursor-pointer" for="express">
                       <p class="shipping-method">DHL 貨運</p>
                       <p class="shipping-time">48 小時內送達</p>
                     </label>
@@ -152,7 +152,7 @@
                 </div>
               </div>
 
-              <div class="form-content__part">
+              <div class="form-content__part d-none">
                 <h3 class="form-content__part__title mb-5">付款資訊</h3>
                 <div class="form-content__part__payment">
                   <div class="payment__form-row form-row">
@@ -185,12 +185,12 @@
             <div class="product-details">
               <h5 class="product-details__name">破壞修身牛仔褲</h5>
               <div class="product-details__amount">
-                <div class="amount__minus">−</div>
+                <div class="amount__minus cursor-pointer">−</div>
                 <div class="amount__count">1</div>
-                <div class="amount__add">＋</div>
+                <div class="amount__add cursor-pointer">＋</div>
 
               </div>
-              <div class="product-details__price">$3280</div>
+              <div class="product-details__price">2000</div>
             </div>
           </div>
           <div class="cart__product__row">
@@ -198,11 +198,11 @@
             <div class="product-details">
               <h5 class="product-details__name">刷色寬筒牛仔褲</h5>
               <div class="product-details__amount">
-                <div class="amount__minus">−</div>
+                <div class="amount__minus cursor-pointer">−</div>
                 <div class="amount__count">1</div>
-                <div class="amount__add">＋</div>
+                <div class="amount__add cursor-pointer">＋</div>
               </div>
-              <div class="product-details__price">$3680</div>
+              <div class="product-details__price">2500</div>
             </div>
           </div>
         </div>
@@ -212,13 +212,13 @@
         </div>
         <div class="cart__subtotal">
           <div class="subtotal-title">小計</div>
-          <div class="subtotal-price">$ 6960</div>
+          <div class="subtotal-price">4500</div>
         </div>
       </section>
 
       <section id="btn-control" class="btn-control-panel">
-        <button class="btn btn-white"><i class="fa-solid fa-arrow-left-long"></i> 上一步</button>
-        <button class="btn btn-primary">下一步 <i class="fa-solid fa-arrow-right-long"></i></button>
+        <button class="btn btn-white previous  d-none"><i class="fa-solid fa-arrow-left-long"></i> 上一步</button>
+        <button class="btn btn-primary next">下一步 <i class="fa-solid fa-arrow-right-long"></i></button>
       </section>
     </main>
 

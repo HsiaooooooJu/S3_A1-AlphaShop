@@ -1542,7 +1542,6 @@ input:invalid {
   display: flex;
   justify-content: center;
   transition: opacity 0.15s ease-out 0.15s;
-  opacity: 1;
 }
 .navbar__toggle {
   display: none;
@@ -1590,24 +1589,6 @@ input:invalid {
   display: flex;
   justify-content: space-between;
 }
-#main-content .stepper__step__circle-container {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  text-align: center;
-}
-#main-content .stepper__step__label {
-  display: none;
-}
-#main-content .stepper__step__connect-line {
-  position: absolute;
-  top: 50%;
-  left: 200%;
-  display: block;
-  width: 60px;
-  height: 2px;
-  background-color: #AFB1BD;
-}
 
 .stepper__step {
   position: relative;
@@ -1623,6 +1604,10 @@ input:invalid {
   content: "3";
 }
 .stepper__step__circle-container {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  text-align: center;
   background-color: #fff;
   color: #AFB1BD;
   border: 1px solid #AFB1BD;
@@ -1637,6 +1622,21 @@ input:invalid {
   background-color: #2A2A2A;
   color: #DEDEDE;
   border: none;
+}
+.stepper__step__connect-line {
+  position: absolute;
+  top: 50%;
+  left: 200%;
+  display: block;
+  width: 60px;
+  height: 2px;
+  background-color: #AFB1BD;
+}
+.stepper__step.active > .stepper__step__connect-line {
+  background-color: #2A2A2A;
+}
+.stepper__step__label {
+  display: none;
 }
 
 .form-panel__container {
@@ -1693,8 +1693,28 @@ label {
   padding: 6px 10px;
   height: 60px;
   width: 100%;
-  border: 2px solid #F0F0F5;
+  border: 1px solid #F0F0F5;
   border-radius: 8px;
+}
+.form-content__part__shipping .shipping__form-row input[type=radio] {
+  height: 0;
+  margin-right: 0.8rem;
+  padding: 0.4rem;
+  border-radius: 50%;
+}
+.form-content__part__shipping .shipping__form-row input[type=radio]:checked {
+  box-shadow: inset 0 0 0 4px #2A2A2A;
+}
+.form-content__part__shipping .shipping__form-row input[type=radio]:checked::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  border: 1px solid black;
+  font-weight: 700;
 }
 .form-content__part__shipping .shipping__form-row > label {
   margin: 0;
@@ -1712,23 +1732,9 @@ label {
   text-align: right;
   font-size: 0.8rem;
 }
-.form-content__part__shipping input[type=radio] {
-  height: 0;
-  margin-right: 0.8rem;
-  padding: 0.4rem;
-  border-radius: 50%;
-}
-.form-content__part__shipping input[type=radio]:checked {
-  box-shadow: inset 0 0 0 4px #2A2A2A;
-}
-.form-content__part__shipping .shipping__form-row.active {
-  border: 1px solid #2A2A2A;
-}
-.form-content__part__shipping .shipping__form-row.active .shipping-method {
-  font-weight: 700;
-}
 .form-content__part__payment {
   position: relative;
+  margin: 0 0 6rem 0;
 }
 .form-content__part__payment .form-row {
   display: flex;
@@ -1753,7 +1759,7 @@ label {
 
 .cart-panel {
   width: 85%;
-  margin: 6rem auto 0 auto;
+  margin: 0 auto;
   border: 2px solid #F0F0F5;
   border-radius: 0.5rem;
 }
@@ -1810,6 +1816,12 @@ label {
   margin: 0 1.8rem;
   font-size: 0.9rem;
 }
+.cart-panel .cart__product__row .product-details__price {
+  font-weight: 700;
+}
+.cart-panel .cart__product__row .product-details__price::before {
+  content: "$ ";
+}
 .cart-panel .cart__delivery,
 .cart-panel .cart__subtotal {
   display: flex;
@@ -1827,6 +1839,10 @@ label {
   font-weight: 700;
   font-size: 0.9rem;
 }
+.cart-panel .cart__delivery .subtotal-price::before,
+.cart-panel .cart__subtotal .subtotal-price::before {
+  content: "$ ";
+}
 .cart-panel .cart__delivery {
   padding: 1rem 0 0;
 }
@@ -1843,7 +1859,7 @@ label {
   border-top: 2px solid #F0F0F5;
 }
 .btn-control-panel .btn {
-  width: 40%;
+  width: 100%;
   height: 40px;
   border-radius: 8px;
 }
