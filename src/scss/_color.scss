@@ -1,0 +1,22 @@
+// global
+html {
+  --main-color: #2A2A2A;
+  --primary-color: #F67599;
+  --light-gray: #F0F0F5;
+  --gray: #AFB1BD;
+  --label: #808080;
+  --body-bg: #FFF;
+  --input-placeholder: #999999;
+  --footer-color: #F6F7F8;
+}
+
+html[data-theme="dark"]{
+  --main-color: #FFF;
+  --primary-color: #F67599;
+  --light-gray: #F0F0F5;
+  --gray: #AFB1BD;
+  --label: #808080;
+  --body-bg: #383838;
+  --input-placeholder: #999999;
+  --footer-color: #E6E6EB;
+}

@@ -1,5 +1,6 @@
 @import './basic';
 @import './reset';
+@import './color';
 
 #main-app {
   height: 100%;
@@ -14,7 +15,7 @@
   height: 56px;
   z-index: 999;
   background-color: #fff;
-  @extend %standard-boxshadow;
+  @extend %standard-box-shadow;
 
   &__brand {
     width: 135px;
@@ -56,8 +57,8 @@
       padding: 30px;
       width: 90%;
       text-align: center;
-      border-bottom: 2px solid $light-gray;
-      background-color: #fff;
+      border-bottom: 2px solid var(--light-gray);
+      background-color: var(--body-bg);
     }
 
     &__item:last-child {
@@ -99,9 +100,9 @@
     height: 32px;
     border-radius: 50%;
     text-align: center;
-    background-color: $body-bg;
-    color: $gray;
-    border: 1px solid $gray;
+    background-color: var(--body-bg);
+    color: var(--gray);
+    border: 1px solid var(--gray);
     font-weight: 500;
     padding-top: 6px;
   }
@@ -113,7 +114,7 @@
   &.checked>&__circle-container,
   &.active>&__circle-container {
     padding-top: 8px;
-    background-color: $main-color;
+    background-color: var(--main-color);
     color: #DEDEDE;
     border: none;
   }
@@ -124,7 +125,7 @@
     display: block;
     width: calc((50% - 32px - 16px)/2);
     height: 2px;
-    background-color: $gray;
+    background-color: var(--gray);
   }
 
   .line-one {
@@ -138,7 +139,7 @@
   }
 
   &.active>&__connect-line {
-    background-color: $main-color;
+    background-color: var(--main-color);
   }
 
   &__label {
@@ -159,14 +160,14 @@ select {
 }
 
 select:invalid {
-  color: $input-placeholder;
+  color: var(--input-placeholder);
 }
 
 label {
   width: 100%;
   font-size: 0.7rem;
   margin-bottom: 0.4rem;
-  color: $label;
+  color: var(--label);
   font-weight: 600;
 }
 
@@ -215,7 +216,7 @@ input {
       padding: 6px 10px;
       height: 60px;
       width: 100%;
-      border: 1px solid $light-gray;
+      border: 1px solid var(--light-gray);
       border-radius: 8px;
 
       input[type="radio"] {
@@ -225,7 +226,7 @@ input {
         border-radius: 50%;
 
         &:checked {
-          box-shadow: inset 0 0 0 4px $main-color;
+          box-shadow: inset 0 0 0 4px var(--main-color);
         }
       }
     }
@@ -244,7 +245,7 @@ input {
 
     .shipping__form-row>label {
       margin: 0;
-      color: $main-color;
+      color: var(--main-color);
 
       .shipping-method {
         font-size: 14px;
@@ -297,12 +298,16 @@ input {
 .cart-panel {
   width: 85%;
   margin: 0 auto;
-  border: 2px solid $light-gray;
+  border: 2px solid var(--light-gray);
   border-radius: 0.5rem;
 
   .cart__product {
     display: flex;
     flex-direction: column;
+
+    &__title {
+      display: none;
+    }
 
     &__row {
       display: flex;
@@ -350,7 +355,7 @@ input {
             height: 1.5rem;
             padding-top: 0.2rem;
             border-radius: 50%;
-            background-color: $light-gray;
+            background-color: var(--light-gray);
             text-align: center;
           }
 
@@ -378,7 +383,7 @@ input {
     align-items: center;
     margin: 0.8rem auto 0 auto;
     width: 90%;
-    border-top: 1px solid $light-gray;
+    border-top: 1px solid var(--light-gray);
     font-size: 0.9rem;
 
     .delivery-price,
@@ -406,9 +411,9 @@ input {
   display: flex;
   justify-content: space-between;
   width: 85%;
-  margin: 2rem auto;
+  margin: 1rem auto;
   padding: 1.5rem 0;
-  border-top: 2px solid $light-gray;
+  border-top: 2px solid var(--light-gray);
 
   .btn {
     width: 100%;
@@ -423,7 +428,7 @@ input {
 
   .next {
     color: #fff;
-    background-color: $primary-color;
+    background-color: var(--primary-color);
   }
 
 
@@ -495,7 +500,7 @@ footer {
     .stepper {
       // grid-row-start / grid-column-start / grid-row-end / grid-column-end
       grid-area: 1 / 1 / 1 / 2;
-      margin: 2rem auto;
+      margin: 1.5rem auto;
 
       .stepper__step {
         display: flex;
@@ -529,25 +534,54 @@ footer {
           margin: 0;
           margin-left: 0.3rem;
           font-size: 1rem;
-          color: $main-color;
+          color: var(--main-color);
         }
       }
     }
 
     .form-panel {
       grid-area: 2 / 1 / 2 / 1;
+
       .form-content__part {
-        margin: 4rem auto;
+        margin: 5rem auto 1rem auto;
+
+        &__destination {
+          .form-row.gender-row {
+            width: 30%;
+          }
+
+          .form-row.name-row {
+            width: 65%;
+          }
+
+          .form-row.tel-row {
+            width: 47.5%;
+          }
+
+          .form-row.email-row {
+            width: 47.5%;
+          }
+
+          .form-row.county-row {
+            width: 30%;
+          }
+
+          .form-row.address-row {
+            width: 65%;
+          }
+        }
       }
     }
 
     .cart-panel {
       grid-area: 2 / 2 / span 3 / 2;
       height: 91%;
+      background-color: var(--body-bg);
 
       .cart__product {
 
         &__title {
+          display: block;
           width: 90%;
           margin: 2rem auto;
         }
@@ -587,7 +621,6 @@ footer {
     .btn-control-panel {
       position: relative;
       grid-area: 3 / 1 / 3 / 1;
-      margin: 2rem auto;
 
       .btn {
         width: 35%;
@@ -607,7 +640,7 @@ footer {
     margin: 8rem auto 0 auto;
     height: 16rem;
     width: 100%;
-    background-color: $footer-color;
+    background-color: var(--footer-color);
 
     .footer__container {
       display: flex;
@@ -628,13 +661,13 @@ footer {
 
         &__title {
           margin-bottom: 1.5rem;
-          color: $main-color;
+          color: var(--main-color);
           font-size: 1.5rem;
           font-weight: 700;
         }
 
         &__item {
-          color: $label;
+          color: var(--label);
           font-size: 16px;
           font-weight: 400;
           line-height: 1.5;

@@ -1,12 +1,4 @@
-$main-color: #2A2A2A;
-$primary-color: #F67599;
-$light-gray: #F0F0F5;
-$gray: #AFB1BD;
-$label: #808080;
-$body-bg: #fff;
-$input-placeholder: #999999;
-$footer-color: #F6F7F8;
-
+@import './color';
 @import url('https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300;500;600;700&display=swap');
 
 $sizes: (
@@ -23,8 +15,8 @@ html {
 
 body {
   height: 100%;
-  background: $body-bg;
-  color: $main-color;
+  background: var(--body-bg);
+  color: var(--main-color);
   font-family: 'Noto Sans TC', sans-serif;
 }
 
@@ -181,14 +173,14 @@ $abbrev in (margin: m, padding: p) {
   }
 }
 
-%standard-boxshadow {
+%standard-box-shadow {
   box-shadow: 3px 0 13px 0 rgba(100, 112, 134, 0.1);
 }
 
 %input-style {
   height: 35px;
   padding: 0.6rem;
-  border: 1px solid $main-color;
+  border: 1px solid var(--main-color);
   border-radius: 0.3rem;
   font-size: 0.7rem;
   background-color: transparent;
