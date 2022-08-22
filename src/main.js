@@ -15,6 +15,7 @@ const deliveryPrice = document.querySelector(".delivery-price");
 const cartProduct = document.querySelector(".cart__product");
 const shippingRows = document.querySelector(".form-content__part__shipping");
 const cartSubtotal = document.querySelector(".cart__subtotal .subtotal-price");
+const darkModeToggle = document.querySelector(".dark-mode__input");
 
 let step = 0;
 let deliveryCost = 0;
@@ -54,12 +55,11 @@ function setBtnStatus() {
   if (step === 2) {
     nextBtn.innerHTML = "確認下單";
   } else {
-    nextBtn.innerHTML = "下一步";
+    nextBtn.innerHTML = `下一步 <i class="fa-solid fa-arrow-right-long"></i>`;
   }
 }
 
 function changeDeliveryFee(e) {
-  e.preventDefault()
   if (e.target.matches(".standard")) {
     deliveryPrice.innerHTML = "免費";
     deliveryCost = 0;
@@ -90,7 +90,18 @@ function renderCart() {
   cartSubtotal.innerHTML = subtotal + deliveryCost;
 }
 
+// Dark mode
+function handleDarkMode(e) {
+  e.preventDefault();
+  if (e.target.checked) {
+    document.documentElement.setAttribute("data-theme", "dark");
+  } else {
+    document.documentElement.setAttribute("data-theme", "light");
+  }
+}
+
 btnPanel.addEventListener("click", handleStepControl);
 shippingRows.addEventListener("click", changeDeliveryFee);
 cartProduct.addEventListener("click", handleProductAmount);
 mainContent.addEventListener("click", renderCart);
+darkModeToggle.addEventListener("change", handleDarkMode);
