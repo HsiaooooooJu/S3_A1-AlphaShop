@@ -1,10 +1,11 @@
 ## S3_A1-AlphaShop
-![image](https://github.com/HsiaooooooJu/S3_A1-AlphaShop/blob/main/dist/image/Alpha-shop-Mobile.png)
-![image](https://github.com/HsiaooooooJu/S3_A1-AlphaShop/blob/main/dist/image/Alpha-shop-Desktop_light.png)
-![image](https://github.com/HsiaooooooJu/S3_A1-AlphaShop/blob/main/dist/image/Alpha-shop-Desktop_dark.png)
 
 ## General info 🙌🏻
 A demo of shopping page using Webpack/SCSS.
+
+![image](https://github.com/HsiaooooooJu/S3_A1-AlphaShop/blob/main/dist/image/Alpha-shop-Mobile.png)
+![image](https://github.com/HsiaooooooJu/S3_A1-AlphaShop/blob/main/dist/image/Alpha-shop-Desktop_light.png)
+![image](https://github.com/HsiaooooooJu/S3_A1-AlphaShop/blob/main/dist/image/Alpha-shop-Desktop_dark.png)
 
 ## Features
 1. Users can click switch moon icon to switch dark mode.
@@ -31,15 +32,7 @@ npm install
 npm run watch
 ```
 
-4. Build production
-
-```
-npm run build
-```
-
-5. To display the project on your browser, link to: http://localhost:5500
-
-6. Use  ```Ctrl+C```  to terminate the application
+4. Use  ```Ctrl+C```  to terminate the application
 
 
 ## Built with
