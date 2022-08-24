@@ -3,6 +3,8 @@
 ## General info 🙌🏻
 A demo of shopping page using Webpack/SCSS.
 
+https://hsiaooooooju.github.io/S3_A1-AlphaShop/
+
 ![image](https://github.com/HsiaooooooJu/S3_A1-AlphaShop/blob/main/dist/image/Alpha-shop-Mobile.png)
 ![image](https://github.com/HsiaooooooJu/S3_A1-AlphaShop/blob/main/dist/image/Alpha-shop-Desktop_light.png)
 ![image](https://github.com/HsiaooooooJu/S3_A1-AlphaShop/blob/main/dist/image/Alpha-shop-Desktop_dark.png)
