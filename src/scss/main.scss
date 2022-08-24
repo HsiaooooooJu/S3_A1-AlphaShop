@@ -17,8 +17,8 @@
   background-color: var(--body-bg);
   @extend %standard-box-shadow;
 
-  &__brand {
-    width: 135px;
+  &__brand__logo {
+    width: 8.5rem;
   }
 
   &__toggle:checked~&__menu {

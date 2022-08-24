@@ -1696,8 +1696,8 @@ input:invalid {
   z-index: 999;
   background-color: var(--body-bg);
 }
-.navbar__brand {
-  width: 135px;
+.navbar__brand__logo {
+  width: 8.5rem;
 }
 .navbar__toggle:checked ~ .navbar__menu {
   transform: scale(1, 1);
