@@ -73,8 +73,18 @@ function changeDeliveryFee(e) {
 function handleProductAmount(e) {
   e.preventDefault()
   let amount = Number(e.target.parentElement.children[1].innerHTML);
-  let price = Number(e.target.parentElement.nextElementSibling.innerHTML);
-  // console.log(price);
+  // split: delete the comma from the price so it can be calculated
+  // split returns Array
+  // put strings together in Array use join()
+  let price = Number(
+    e.target.parentElement.nextElementSibling.innerHTML.split(",").join("")
+  );
+  // join() Defination
+  /* 
+  const elements = ['Sun', 'Earth', 'Moon'];
+  console.log(elements.join());   // output: "Sun,Earth,Moon"
+  console.log(elements.join(''));  // output: "SunEarthMoon"
+  */
   if (e.target.matches(".amount__add")) {
     e.target.parentElement.children[1].innerHTML = amount + 1;
     subtotal += price;
@@ -87,7 +97,7 @@ function handleProductAmount(e) {
 }
 
 function renderCart() {
-  cartSubtotal.innerHTML = subtotal + deliveryCost;
+  cartSubtotal.innerHTML = Number(subtotal + deliveryCost).toLocaleString();
 }
 
 // Dark mode
@@ -95,8 +105,16 @@ function handleDarkMode(e) {
   e.preventDefault();
   if (e.target.checked) {
     document.documentElement.setAttribute("data-theme", "dark");
+    document.querySelector(".moon").classList.add("d-none");
+    document.querySelectorAll(".logo").forEach(img => { img.classList.add("d-none") });
+    document.querySelector(".sun").classList.remove("d-none");
+    document.querySelectorAll(".white-logo").forEach(img => { img.classList.remove("d-none") });
   } else {
     document.documentElement.setAttribute("data-theme", "light");
+    document.querySelector(".moon").classList.remove("d-none");
+    document.querySelectorAll(".logo").forEach(img => { img.classList.remove("d-none") });
+    document.querySelector(".sun").classList.add("d-none");
+    document.querySelectorAll(".white-logo").forEach(img => { img.classList.add("d-none") });
   }
 }
 

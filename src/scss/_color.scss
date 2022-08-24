@@ -17,8 +17,6 @@
   --circle-container-color: #DEDEDE;
   --amount-btn-color: #F0F0F5;
   --icon-brightness: brightness(1);
-  --dark-mode-url: url('/dist/image/moon.svg');
-  --logo-url: url('/dist/image/Logo.svg');
 }
 
 :root[data-theme="dark"] {
@@ -39,6 +37,4 @@
   --circle-container-color: #DEDEDE;
   --amount-btn-color: #808080;
   --icon-brightness: brightness(80);
-  --dark-mode-url: url('/dist/image/sun.svg');
-  --logo-url: url('/dist/image/white-logo.svg');
 }

@@ -19,13 +19,6 @@
 
   &__brand {
     width: 135px;
-
-    &__logo {
-      height: 1.75rem;
-      background-size: 100% 100%;
-      background-repeat: no-repeat;
-      background-image: var(--logo-url);
-    }
   }
 
   &__toggle:checked~&__menu {
@@ -82,9 +75,6 @@
   .dark-mode {
     width: 20px;
     height: 20px;
-    background-image: var(--dark-mode-url);
-    background-size: contain;
-    background-repeat: no-repeat;
 
     &__label {
       display: block;
@@ -336,15 +326,10 @@ input {
         height: 6.25rem;
         background-size: cover;
         background-position: center;
-        border-radius: 0.4rem;
-      }
 
-      .product-one {
-        background-image: url('/dist/image/dagny-petite-jeans.png');
-      }
-
-      .product-two {
-        background-image: url('/dist/image/block-wide-eans.png');
+        >img {
+          border-radius: 0.4rem;
+        }
       }
 
       .product-details {
@@ -678,14 +663,8 @@ footer {
       max-width: 1200px;
       margin: 0 auto;
 
-      .navbar__brand {
-        &__logo {
-          padding: 1rem;
-          width: 11rem;
-          background-image: var(--logo-url);
-          background-size: 100%;
-          background-repeat: no-repeat;
-        }
+      .navbar__brand__logo {
+        width: 10.5rem;
       }
 
       &__list {

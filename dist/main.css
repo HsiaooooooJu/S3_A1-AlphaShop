@@ -19,8 +19,6 @@
   --circle-container-color: #DEDEDE;
   --amount-btn-color: #F0F0F5;
   --icon-brightness: brightness(1);
-  --dark-mode-url: url("/dist/image/moon.svg");
-  --logo-url: url("/dist/image/Logo.svg");
 }
 
 :root[data-theme=dark] {
@@ -41,8 +39,6 @@
   --circle-container-color: #DEDEDE;
   --amount-btn-color: #808080;
   --icon-brightness: brightness(80);
-  --dark-mode-url: url("/dist/image/sun.svg");
-  --logo-url: url("/dist/image/white-logo.svg");
 }
 
 html {
@@ -766,8 +762,6 @@ body {
   --circle-container-color: #DEDEDE;
   --amount-btn-color: #F0F0F5;
   --icon-brightness: brightness(1);
-  --dark-mode-url: url("/dist/image/moon.svg");
-  --logo-url: url("/dist/image/Logo.svg");
 }
 
 :root[data-theme=dark] {
@@ -788,8 +782,6 @@ body {
   --circle-container-color: #DEDEDE;
   --amount-btn-color: #808080;
   --icon-brightness: brightness(80);
-  --dark-mode-url: url("/dist/image/sun.svg");
-  --logo-url: url("/dist/image/white-logo.svg");
 }
 
 html {
@@ -1513,8 +1505,6 @@ body {
   --circle-container-color: #DEDEDE;
   --amount-btn-color: #F0F0F5;
   --icon-brightness: brightness(1);
-  --dark-mode-url: url("/dist/image/moon.svg");
-  --logo-url: url("/dist/image/Logo.svg");
 }
 
 :root[data-theme=dark] {
@@ -1535,8 +1525,6 @@ body {
   --circle-container-color: #DEDEDE;
   --amount-btn-color: #808080;
   --icon-brightness: brightness(80);
-  --dark-mode-url: url("/dist/image/sun.svg");
-  --logo-url: url("/dist/image/white-logo.svg");
 }
 
 body {
@@ -1675,8 +1663,6 @@ input:invalid {
   --circle-container-color: #DEDEDE;
   --amount-btn-color: #F0F0F5;
   --icon-brightness: brightness(1);
-  --dark-mode-url: url("/dist/image/moon.svg");
-  --logo-url: url("/dist/image/Logo.svg");
 }
 
 :root[data-theme=dark] {
@@ -1697,8 +1683,6 @@ input:invalid {
   --circle-container-color: #DEDEDE;
   --amount-btn-color: #808080;
   --icon-brightness: brightness(80);
-  --dark-mode-url: url("/dist/image/sun.svg");
-  --logo-url: url("/dist/image/white-logo.svg");
 }
 
 #main-app {
@@ -1714,12 +1698,6 @@ input:invalid {
 }
 .navbar__brand {
   width: 135px;
-}
-.navbar__brand__logo {
-  height: 1.75rem;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-image: var(--logo-url);
 }
 .navbar__toggle:checked ~ .navbar__menu {
   transform: scale(1, 1);
@@ -1767,9 +1745,6 @@ input:invalid {
 .navbar .dark-mode {
   width: 20px;
   height: 20px;
-  background-image: var(--dark-mode-url);
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 .navbar .dark-mode__label {
   display: block;
@@ -1982,13 +1957,9 @@ label {
   height: 6.25rem;
   background-size: cover;
   background-position: center;
+}
+.cart-panel .cart__product__row .product-img > img {
   border-radius: 0.4rem;
-}
-.cart-panel .cart__product__row .product-one {
-  background-image: url("/dist/image/dagny-petite-jeans.png");
-}
-.cart-panel .cart__product__row .product-two {
-  background-image: url("/dist/image/block-wide-eans.png");
 }
 .cart-panel .cart__product__row .product-details {
   display: flex;
@@ -2255,11 +2226,7 @@ footer {
     margin: 0 auto;
   }
   footer .footer__container .navbar__brand__logo {
-    padding: 1rem;
-    width: 11rem;
-    background-image: var(--logo-url);
-    background-size: 100%;
-    background-repeat: no-repeat;
+    width: 10.5rem;
   }
   footer .footer__container__list {
     height: 40%;
